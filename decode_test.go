@@ -95,20 +95,11 @@ var unmarshalTests = []struct {
 
 	// Bools from spec
 	{
-		"canonical: y",
+		"canonical: true",
 		map[string]interface{}{"canonical": true},
 	}, {
-		"answer: NO",
+		"answer: false",
 		map[string]interface{}{"answer": false},
-	}, {
-		"logical: True",
-		map[string]interface{}{"logical": true},
-	}, {
-		"option: on",
-		map[string]interface{}{"option": true},
-	}, {
-		"option: on",
-		map[string]bool{"option": true},
 	},
 	// Ints from spec
 	{
@@ -256,7 +247,7 @@ var unmarshalTests = []struct {
 			B int "a"
 		}{1},
 	}, {
-		"a: y",
+		"a: true",
 		&struct{ A bool }{true},
 	},
 
